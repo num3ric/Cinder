@@ -8,3 +8,12 @@
 	path = include/boost
 	url = git://github.com/cinder/Cinder-Boost.git
 	branch = boost_1_58
+[submodule "blocks/Cinder-NDI"]
+	path = blocks/Cinder-NDI
+	url = https://github.com/num3ric/Cinder-NDI.git
+[submodule "blocks/Cinder-OpenCV3"]
+	path = blocks/Cinder-OpenCV3
+	url = https://github.com/num3ric/Cinder-OpenCV3.git
+[submodule "blocks/Cinder-Sdi"]
+	path = blocks/Cinder-Sdi
+	url = https://github.com/num3ric/Cinder-Sdi.git

@@ -26,6 +26,7 @@ lib/winrt/x64/cinder*.lib
 *.VC.opendb
 *.VC.db
 *.opensdf
+*.VC.db
 Debug/
 Release/
 Debug_ANGLE/
