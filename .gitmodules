@@ -23,3 +23,6 @@
 [submodule "blocks/Cinder-WMFVideo"]
 	path = blocks/Cinder-WMFVideo
 	url = https://github.com/Potion/Cinder-WMFVideo.git
+[submodule "blocks/Cinder-Var"]
+	path = blocks/Cinder-Var
+	url = https://github.com/num3ric/Cinder-Var.git
