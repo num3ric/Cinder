@@ -20,3 +20,6 @@
 [submodule "blocks/Cinder-Profiler"]
 	path = blocks/Cinder-Profiler
 	url = https://github.com/num3ric/Cinder-Profiler.git
+[submodule "blocks/Cinder-WMFVideo"]
+	path = blocks/Cinder-WMFVideo
+	url = https://github.com/Potion/Cinder-WMFVideo.git
