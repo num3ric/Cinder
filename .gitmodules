@@ -17,3 +17,6 @@
 [submodule "blocks/Cinder-Sdi"]
 	path = blocks/Cinder-Sdi
 	url = https://github.com/num3ric/Cinder-Sdi.git
+[submodule "blocks/Cinder-Profiler"]
+	path = blocks/Cinder-Profiler
+	url = https://github.com/num3ric/Cinder-Profiler.git
