@@ -1097,8 +1097,6 @@
 		43F78EF61516DAE200EB63B5 /* Json.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F78EF51516DAE200EB63B5 /* Json.h */; };
 		5391FE660E95CB01002A13D5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE840307C02AAC07 /* AppKit.framework */; };
 		8499F5B723F60DA000360A6F /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5B623F60DA000360A6F /* glad.c */; };
-		8499F5B823F60DA000360A6F /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5B623F60DA000360A6F /* glad.c */; };
-		8499F5B923F60DA000360A6F /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5B623F60DA000360A6F /* glad.c */; };
 		8499F5BB23F60DAC00360A6F /* glad_es.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5BA23F60DAC00360A6F /* glad_es.c */; };
 		8499F5BC23F60DAC00360A6F /* glad_es.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5BA23F60DAC00360A6F /* glad_es.c */; };
 		B0245F5919BEDF3200BC878D /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = B0245F5819BEDF3200BC878D /* Query.h */; };
@@ -4719,7 +4717,6 @@
 				27C100161BD16D4800AF387F /* Fbo.cpp in Sources */,
 				27C100171BD16D4800AF387F /* lpc.c in Sources */,
 				27C100181BD16D4800AF387F /* Area.cpp in Sources */,
-				8499F5B923F60DA000360A6F /* glad.c in Sources */,
 				27C100191BD16D4800AF387F /* VaoImplEs.cpp in Sources */,
 				27C1001A1BD16D4800AF387F /* Log.cpp in Sources */,
 				27C1001B1BD16D4800AF387F /* synthesis.c in Sources */,
@@ -4972,7 +4969,6 @@
 				27C1FEC01BD0AE3400AF387F /* Fbo.cpp in Sources */,
 				27C1FEC11BD0AE3400AF387F /* lpc.c in Sources */,
 				27C1FEC21BD0AE3400AF387F /* Area.cpp in Sources */,
-				8499F5B823F60DA000360A6F /* glad.c in Sources */,
 				27C1FEC31BD0AE3400AF387F /* VaoImplEs.cpp in Sources */,
 				27C1FEC41BD0AE3400AF387F /* Log.cpp in Sources */,
 				27C1FEC51BD0AE3400AF387F /* synthesis.c in Sources */,
