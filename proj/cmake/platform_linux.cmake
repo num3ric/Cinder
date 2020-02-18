@@ -57,7 +57,7 @@ list( APPEND SRC_SET_CINDER_LINUX ${CINDER_SRC_DIR}/cinder/UrlImplCurl.cpp )
 if( NOT CINDER_HEADLESS ) # Desktop ogl, es2, es3, RPi
 	if( CINDER_GL_ES )
 		list( APPEND SRC_SET_CINDER_LINUX
-			${CINDER_SRC_DIR}/cinder/linux/gl_es_load.cpp
+			${CINDER_SRC_DIR}/glad/glad_es.c
 		)
 	else()
 		list( APPEND SRC_SET_CINDER_LINUX
@@ -76,7 +76,7 @@ if( NOT CINDER_HEADLESS ) # Desktop ogl, es2, es3, RPi
 		)
 	else() # RPi
 		list( APPEND SRC_SET_CINDER_LINUX
-			${CINDER_SRC_DIR}/cinder/linux/gl_es_load.cpp
+			${CINDER_SRC_DIR}/glad/glad_es.c
 			${CINDER_SRC_DIR}/cinder/app/linux/AppImplLinuxRpi.cpp
 			${CINDER_SRC_DIR}/cinder/app/linux/RendererGlLinuxRpi.cpp
 			${CINDER_SRC_DIR}/cinder/app/linux/WindowImplLinuxRpi.cpp
@@ -90,7 +90,7 @@ else() # Headless egl, osmesa
 	)
 	if( CINDER_GL_ES )
 		list( APPEND SRC_SET_CINDER_LINUX
-			${CINDER_SRC_DIR}/cinder/linux/gl_es_load.cpp
+			${CINDER_SRC_DIR}/glad/glad_es.c
 		)
 	endif()
 endif()

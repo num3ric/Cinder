@@ -27,6 +27,7 @@
 #if defined( CINDER_LINUX_EGL_ONLY )
 	#include "EGL/egl.h"
 #else
+	#include "glad/glad.h"
 	#include "glfw/glfw3.h"
 #endif
 

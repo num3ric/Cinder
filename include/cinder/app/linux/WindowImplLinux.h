@@ -30,6 +30,7 @@
 #if defined( CINDER_LINUX_EGL_ONLY )
 	#include "EGL/eglplatform.h"
 #elif ! defined( CINDER_HEADLESS )
+	#include "glad/glad.h"
 	#include "glfw/glfw3.h"
 	#include "glfw/glfw3native.h"
 #endif

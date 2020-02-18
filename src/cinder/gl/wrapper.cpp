@@ -33,6 +33,7 @@
 	#include <OpenGL/OpenGL.h>
 #elif defined( CINDER_LINUX )
 	#if ! defined( CINDER_LINUX_EGL_ONLY )
+		#include "glad/glad.h"
 		#include "glfw/glfw3.h"
 	#endif
 #endif
