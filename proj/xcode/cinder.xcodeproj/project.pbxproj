@@ -1097,8 +1097,6 @@
 		43F78EF61516DAE200EB63B5 /* Json.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F78EF51516DAE200EB63B5 /* Json.h */; };
 		5391FE660E95CB01002A13D5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE840307C02AAC07 /* AppKit.framework */; };
 		8499F5B723F60DA000360A6F /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5B623F60DA000360A6F /* glad.c */; };
-		8499F5BB23F60DAC00360A6F /* glad_es.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5BA23F60DAC00360A6F /* glad_es.c */; };
-		8499F5BC23F60DAC00360A6F /* glad_es.c in Sources */ = {isa = PBXBuildFile; fileRef = 8499F5BA23F60DAC00360A6F /* glad_es.c */; };
 		B0245F5919BEDF3200BC878D /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = B0245F5819BEDF3200BC878D /* Query.h */; };
 		B06DE70319C74935008B9E1B /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06DE70219C74935008B9E1B /* Query.cpp */; };
 		B31987EB1ACB9D8B00DEB9EF /* draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B31987EA1ACB9D8B00DEB9EF /* draw.cpp */; };
@@ -2124,7 +2122,6 @@
 		43F78EF51516DAE200EB63B5 /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json.h; sourceTree = "<group>"; };
 		5391FD670E957646002A13D5 /* KeyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyEvent.h; path = app/KeyEvent.h; sourceTree = "<group>"; };
 		8499F5B623F60DA000360A6F /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../src/glad/glad.c; sourceTree = "<group>"; };
-		8499F5BA23F60DAC00360A6F /* glad_es.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad_es.c; path = ../../src/glad/glad_es.c; sourceTree = "<group>"; };
 		B0245F5819BEDF3200BC878D /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = gl/Query.h; sourceTree = "<group>"; };
 		B06DE70219C74935008B9E1B /* Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Query.cpp; path = gl/Query.cpp; sourceTree = "<group>"; };
 		B31987EA1ACB9D8B00DEB9EF /* draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = draw.cpp; path = gl/draw.cpp; sourceTree = "<group>"; };
@@ -3323,7 +3320,6 @@
 		8499F5B523F60D7400360A6F /* glad */ = {
 			isa = PBXGroup;
 			children = (
-				8499F5BA23F60DAC00360A6F /* glad_es.c */,
 				8499F5B623F60DA000360A6F /* glad.c */,
 			);
 			name = glad;
@@ -4933,7 +4929,6 @@
 				27C100B81BD16D4800AF387F /* Context.cpp in Sources */,
 				27C100B91BD16D4800AF387F /* Display.cpp in Sources */,
 				27C100BA1BD16D4800AF387F /* Capture.cpp in Sources */,
-				8499F5BC23F60DAC00360A6F /* glad_es.c in Sources */,
 				27C100BB1BD16D4800AF387F /* CaptureImplCocoaDummy.mm in Sources */,
 				27BE4DD11DA9E4FD00DE84C8 /* ImageSourceFileStbImage.cpp in Sources */,
 				27C100BC1BD16D4800AF387F /* floor1.c in Sources */,
@@ -5185,7 +5180,6 @@
 				27C1FF621BD0AE3400AF387F /* linebreakdef.c in Sources */,
 				27C1FF631BD0AE3400AF387F /* Context.cpp in Sources */,
 				27C1FF641BD0AE3400AF387F /* Window.cpp in Sources */,
-				8499F5BB23F60DAC00360A6F /* glad_es.c in Sources */,
 				27C1FF651BD0AE3400AF387F /* Display.cpp in Sources */,
 				27BE4DD01DA9E4FC00DE84C8 /* ImageSourceFileStbImage.cpp in Sources */,
 				27C1FF661BD0AE3400AF387F /* floor1.c in Sources */,
