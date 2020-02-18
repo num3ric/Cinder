@@ -97,9 +97,9 @@ class CI_API Camera {
 	void	setFarClip( float farClip ) { mFarClip = farClip; mProjectionCached = false; }
 
 	//! Returns the four corners of the Camera's Near clipping plane, expressed in world-space
-	virtual void	getNearClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const;
+	virtual void	getNearClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const { return getClipCoordinates( mNearClip, 1.0f, topLeft, topRight, bottomLeft, bottomRight ); }
 	//! Returns the four corners of the Camera's Far clipping plane, expressed in world-space
-	virtual void	getFarClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const;
+	virtual void	getFarClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const { getClipCoordinates( mFarClip, mFarClip / mNearClip, topLeft, topRight, bottomLeft, bottomRight ); }
 
 	//! Returns the coordinates of the camera's frustum, suitable for passing to \c glFrustum
 	void	getFrustum( float *left, float *top, float *right, float *bottom, float *near, float *far ) const;
@@ -151,6 +151,8 @@ class CI_API Camera {
 	virtual void	calcProjection() const = 0;
 
 	virtual Ray		calcRay( float u, float v, float imagePlaneAspectRatio ) const = 0;
+
+	void			getClipCoordinates( float clipDist, float ratio, vec3* topLeft, vec3* topRight, vec3* bottomLeft, vec3* bottomRight ) const;
 
 	vec3	mEyePoint;
 	vec3	mViewDirection;
@@ -238,7 +240,10 @@ class CI_API CameraOrtho : public Camera {
 	void	setOrtho( float left, float right, float bottom, float top, float nearPlane, float farPlane );
 
 	bool	isPersp() const override { return false; }
-	
+
+	void	getNearClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override { getClipCoordinates( mNearClip, 1.0f, topLeft, topRight, bottomLeft, bottomRight ); }
+	void	getFarClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override { getClipCoordinates( mFarClip, 1.0f, topLeft, topRight, bottomLeft, bottomRight ); }
+
   protected:
 	void	calcProjection() const override;
 	Ray		calcRay( float u, float v, float imagePlaneAspectRatio ) const override;
@@ -281,8 +286,8 @@ class CI_API CameraStereo : public CameraPersp {
 	//! Returns whether stereoscopic rendering is enabled.
 	bool			isStereoEnabled() const { return mIsStereo; }
 
-	void	getNearClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override;
-	void	getFarClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override;
+	void getNearClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override { return getShiftedClipCoordinates( mNearClip, 1.0f, topLeft, topRight, bottomLeft, bottomRight ); }
+	void getFarClipCoordinates( vec3 *topLeft, vec3 *topRight, vec3 *bottomLeft, vec3 *bottomRight ) const override { return getShiftedClipCoordinates( mFarClip, mFarClip / mNearClip, topLeft, topRight, bottomLeft, bottomRight ); }
 	
 	const mat4&	getProjectionMatrix() const override;
 	const mat4&	getViewMatrix() const override;
@@ -297,6 +302,8 @@ class CI_API CameraStereo : public CameraPersp {
 	void	calcViewMatrix() const override;
 	void	calcInverseView() const override;
 	void	calcProjection() const override;
+
+	void	getShiftedClipCoordinates( float clipDist, float ratio, vec3* topLeft, vec3* topRight, vec3* bottomLeft, vec3* bottomRight ) const;
 	
   private:
 	bool			mIsStereo;
