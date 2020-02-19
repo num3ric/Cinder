@@ -64,7 +64,7 @@ public:
 #if defined( CINDER_HEADLESS )
 	virtual void*	getNative();
 	virtual void*	getNative() const;
-#elif defined( CINDER_GL_ES_2_RPI )
+#elif defined( CINDER_GL_ES_3_RPI )
 	virtual EGLNativeWindowType	getNative();
 	virtual EGLNativeWindowType getNative() const;
 #else
@@ -93,7 +93,7 @@ protected:
 	AppImplLinux		*mAppImpl = nullptr;
 	WindowRef			mWindowRef;
 
-#if defined( CINDER_GL_ES_2_RPI )
+#if defined( CINDER_GL_ES_3_RPI )
 	struct NativeWindow;
 	std::unique_ptr<NativeWindow> mNativeWindow;
 	bool				mShowCursor = true;

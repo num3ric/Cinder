@@ -123,7 +123,7 @@
 
 	// Android and Linux
 	#if defined( CINDER_ANDROID ) || defined( CINDER_LINUX )
-		#if ! defined( CINDER_GL_ES_2_RPI )
+		#if ! defined( CINDER_GL_ES_3_RPI )
 		    #define CINDER_GL_HAS_DRAW_INSTANCED
 		#endif
 		#define CINDER_GL_HAS_TEXTURE_NORM16
@@ -148,7 +148,7 @@
 		#define CINDER_GL_HAS_SAMPLERS
 	#else 
 		// OpenGL ES 2
-		#if ! defined( CINDER_GL_ES_2_RPI )
+		#if ! defined( CINDER_GL_ES_3_RPI )
 		    #define CINDER_GL_HAS_DRAW_INSTANCED
 		    #define CINDER_GL_HAS_FBO_MULTISAMPLING
 		    #define CINDER_GL_HAS_MAP_BUFFER_RANGE

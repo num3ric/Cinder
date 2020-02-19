@@ -65,7 +65,7 @@ if( NOT CINDER_HEADLESS ) # Desktop ogl, es2, es3, RPi
 		)
 	endif()
 
-	if( NOT CINDER_GL_ES_2_RPI ) # GLFW
+	if( NOT CINDER_GL_ES_3_RPI ) # GLFW
 		list( APPEND SRC_SET_CINDER_LINUX
 			${SRC_SET_GLFW}
 		)
@@ -124,7 +124,7 @@ if( CINDER_GL_CORE )
 		list( APPEND CINDER_INCLUDE_SYSTEM_PRIVATE ${OSMESA_INCLUDE_DIR} )
 	endif()
 elseif( CINDER_GL_ES )
-	if( NOT CINDER_GL_ES_2_RPI )
+	if( NOT CINDER_GL_ES_3_RPI )
 		find_package( X11 REQUIRED )
 		list( APPEND CINDER_LIBS_DEPENDS ${X11_LIBRARIES} Xcursor Xinerama Xrandr Xi )
 		list( APPEND CINDER_INCLUDE_SYSTEM_PRIVATE ${X11_INCLUDE_DIR} )
@@ -137,7 +137,7 @@ elseif( CINDER_GL_ES )
 		)
 		list( APPEND CINDER_LIBS_DEPENDS
 			/opt/vc/lib/libEGL.so
-			/opt/vc/lib/libGLESv2.so
+			/opt/vc/lib/libGLESv3.so
 			/opt/vc/lib/libbcm_host.so
 		)
 	endif()
@@ -222,7 +222,7 @@ if( CINDER_GL_CORE )
 	list( APPEND CINDER_DEFINES "-DCINDER_GL_CORE" )
 elseif( CINDER_GL_ES )
 	list( APPEND CINDER_DEFINES "-DCINDER_GL_ES" )
-	if( NOT CINDER_GL_ES_2_RPI )
+	if( NOT CINDER_GL_ES_3_RPI )
 		if( CINDER_GL_ES_2 )
 			list( APPEND CINDER_DEFINES "-DCINDER_GL_ES_2" )
 		elseif( CINDER_GL_ES_3 )
@@ -233,7 +233,7 @@ elseif( CINDER_GL_ES )
 			list( APPEND CINDER_DEFINES "-DCINDER_GL_ES_3_2" )
 		endif()
 	else() # rpi
-		list( APPEND CINDER_DEFINES "-DCINDER_GL_ES_2" "-DCINDER_LINUX_EGL_ONLY" "-DCINDER_GL_ES_2_RPI" )
+		list( APPEND CINDER_DEFINES "-DCINDER_GL_ES_3" "-DCINDER_LINUX_EGL_ONLY" "-DCINDER_GL_ES_3_RPI" )
 	endif()
 endif()
 
@@ -244,7 +244,7 @@ if( CINDER_HEADLESS )
 	elseif( CINDER_HEADLESS_GL_OSMESA )
 		list( APPEND CINDER_DEFINES "-DCINDER_HEADLESS -DCINDER_HEADLESS_GL_OSMESA" )
 	endif()
-elseif( NOT CINDER_GL_ES_2_RPI ) # If not headless and not on the RPi we need X.
+elseif( NOT CINDER_GL_ES_3_RPI ) # If not headless and not on the RPi we need X.
 	list( APPEND GLFW_FLAGS "-D_GLFW_X11" )
 endif()
 
