@@ -125,8 +125,8 @@
 	#if defined( CINDER_ANDROID ) || defined( CINDER_LINUX )
 		#if ! defined( CINDER_GL_ES_3_RPI )
 		    #define CINDER_GL_HAS_DRAW_INSTANCED
+			#define CINDER_GL_HAS_TEXTURE_NORM16
 		#endif
-		#define CINDER_GL_HAS_TEXTURE_NORM16
 
 		// Requires: GL_ANDROID_extension_pack_es31a
 		#if defined( CINDER_ANDROID ) && ( CINDER_GL_ES_VERSION == CINDER_GL_ES_VERSION_3_1 )

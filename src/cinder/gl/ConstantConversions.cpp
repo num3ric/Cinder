@@ -235,7 +235,7 @@ std::string	constantToString( GLenum constant )
 	#endif
 
 		sSymbols[GL_RGBA8_SNORM] = "GL_RGBA8_SNORM";
-  #if ! ( defined( CINDER_COCOA_TOUCH ) || defined( CINDER_GL_ANGLE ) )
+  #if ! ( defined( CINDER_COCOA_TOUCH ) || defined( CINDER_GL_ANGLE ) || defined( CINDER_GL_ES_3_RPI ) )
 		// iOS and ANGLE doesn't have these
 		sSymbols[GL_R16_SNORM] = "GL_R16_SNORM";
 		sSymbols[GL_RG16_SNORM] = "GL_RG16_SNORM";
