@@ -112,7 +112,6 @@ Environment* allocateEnvironmentEs()
 
 void EnvironmentEs::initializeFunctionPointers()
 {
-	GLADloadproc
 #if defined( CINDER_ANDROID ) || defined( CINDER_LINUX )
 	gladLoadGLES2Loader( (GLADloadproc)eglGetProcAddress );
 
