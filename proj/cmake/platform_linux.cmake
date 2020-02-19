@@ -137,7 +137,7 @@ elseif( CINDER_GL_ES )
 		)
 		list( APPEND CINDER_LIBS_DEPENDS
 			/opt/vc/lib/libEGL.so
-			/opt/vc/lib/libGLESv3.so
+			/opt/vc/lib/libGLESv2.so
 			/opt/vc/lib/libbcm_host.so
 		)
 	endif()
