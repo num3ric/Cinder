@@ -64,9 +64,6 @@ public:
 #if defined( CINDER_HEADLESS )
 	virtual void*	getNative();
 	virtual void*	getNative() const;
-#elif defined( CINDER_GL_ES_3_RPI )
-	virtual EGLNativeWindowType	getNative();
-	virtual EGLNativeWindowType getNative() const;
 #else
 	virtual GLFWwindow	*getNative() { return mGlfwWindow; }
 	virtual GLFWwindow	*getNative() const { return mGlfwWindow; }
@@ -92,14 +89,7 @@ public:
 protected:
 	AppImplLinux		*mAppImpl = nullptr;
 	WindowRef			mWindowRef;
-
-#if defined( CINDER_GL_ES_3_RPI )
-	struct NativeWindow;
-	std::unique_ptr<NativeWindow> mNativeWindow;
-	bool				mShowCursor = true;
-#else
 	GLFWwindow			*mGlfwWindow = nullptr;
-#endif
 
 	std::string			mTitle;
 	bool				mFullScreen = false;
