@@ -118,8 +118,10 @@
 #if defined( CINDER_GL_ES )
 	#if defined( CINDER_ANDROID ) || defined( CINDER_LINUX ) 	
 		#define GL_ES_EXT_VERSION_2_0
-	#endif 
-	#include "glad/glad_es.h"
+	#endif
+	#if ! defined( CINDER_COCOA_TOUCH )
+		#include "glad/glad_es.h"
+	#endif
 
 	// Android and Linux
 	#if defined( CINDER_ANDROID ) || defined( CINDER_LINUX )
